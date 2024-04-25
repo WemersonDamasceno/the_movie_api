@@ -1,0 +1,77 @@
+name: Flutter Packages Workflow
+
+on:
+  workflow_call:
+    inputs:
+      concurrency:
+        required: false
+        type: number
+        default: 4
+      coverage_excludes:
+        required: false
+        type: string
+        default: ""
+      flutter_channel:
+        required: true
+        type: string
+        default: "stable"
+      flutter_version:
+        required: true
+        type: string
+        default: ""
+      working_directory:
+        required: false
+        type: string
+        default: "."
+      min_coverage:
+        required: false
+        type: number
+        default: 60
+      test_optimization:
+        required: false
+        type: boolean
+        default: true
+      test_recursion:
+        required: false
+        type: boolean
+        default: false
+      runs_on:  
+        required: true
+        type: string
+
+jobs:
+  build:
+    defaults:
+      run:
+        working-directory: ${{ inputs.working_directory }}
+
+    runs-on: ${{ inputs.runs_on }}
+
+    steps:
+      - name: 🔄 Git Checkout
+        uses: actions/checkout@v3
+
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ inputs.flutter_channel }}
+          flutter-version: ${{ inputs.flutter_version }}
+
+      - name: 📦 Install Dependencies
+        run: flutter pub get
+
+      - name: 🔍 Check Formatting
+        run: dart format --set-exit-if-changed lib test
+      
+      - name: 🕵️ Analyze
+        run: flutter analyze lib test
+
+      - name: 🧪 Run Tests
+        run: flutter test --coverage
+        
+      - name: ✅ Check Code Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v2
+        with:
+          path: ${{inputs.working_directory}}/coverage/lcov.info
+          exclude: ${{inputs.coverage_excludes}}
+          min_coverage: ${{inputs.min_coverage}}

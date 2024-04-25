@@ -1,0 +1,28 @@
+name: the_movie_db
+
+on:
+  push:
+    branches:
+      - DEV-*
+
+jobs:
+  verify-flutter:
+    uses: ./.github/workflows/flutter_package.yaml
+    with:
+      flutter_channel: 'stable'
+      flutter_version: '3.19.5'
+      min_coverage: 10 
+      runs_on: ubuntu-latest  # Adicione esta linha para passar o parâmetro runs_on
+
+  verify-semantics-pull-request:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+
+  build:
+    needs:
+      - verify-flutter
+      - verify-semantics-pull-request
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: noop
+        run: echo 'noop'
