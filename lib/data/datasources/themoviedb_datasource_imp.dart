@@ -23,7 +23,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
     if (response.statusCode == 200) {
       var json = jsonDecode(response.data);
       for (var movie in json['results']) {
-        listPopularMovies.add(MovieModel.movieFromJson(movie));
+        listPopularMovies.add(MovieModel.fromJson(movie));
       }
       currentPage++;
       return listPopularMovies;
@@ -45,7 +45,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
       var json = jsonDecode(response.data);
       List<MovieModel> listTrendingMovies = [];
       listTrendingMovies = json['results']
-          .map<MovieModel>((movie) => MovieModel.movieFromJson(movie))
+          .map<MovieModel>((movie) => MovieModel.fromJson(movie))
           .toList();
       return listTrendingMovies;
     } else if (response.statusCode == 503) {
@@ -66,7 +66,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
     if (response.statusCode == 200) {
       var json = jsonDecode(response.data);
       for (var movie in json['results']) {
-        listAllSeries.add(MovieModel.seriesFromJson(movie));
+        listAllSeries.add(MovieModel.fromJson(movie));
       }
       return listAllSeries;
     } else if (response.statusCode == 503) {
@@ -87,7 +87,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
     if (response.statusCode == 200) {
       var json = jsonDecode(response.data);
       for (var movie in json['results']) {
-        listAllMovies.add(MovieModel.movieFromJson(movie));
+        listAllMovies.add(MovieModel.fromJson(movie));
       }
       return listAllMovies;
     } else if (response.statusCode == 503) {
@@ -125,7 +125,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
       var json = jsonDecode(response.data);
       List<MovieModel> listMovies = [];
       listMovies = json['results']
-          .map<MovieModel>((movie) => MovieModel.movieFromJson(movie))
+          .map<MovieModel>((movie) => MovieModel.fromJson(movie))
           .toList();
       return listMovies;
     } else if (response.statusCode == 503) {

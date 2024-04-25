@@ -34,6 +34,10 @@ void main() {
     movieModel.copy(id: 1, title: 'Movie 1'),
     movieModel.copy(id: 2, title: 'Movie 2'),
   ];
+  final List<MovieModel> expectedSeries = [
+    movieModel.copy(id: 1, title: 'Movie 1', releaseDate: null),
+    movieModel.copy(id: 2, title: 'Movie 2', releaseDate: null),
+  ];
 
   setUp(() {
     client = MockHttpClient();
@@ -44,7 +48,7 @@ void main() {
     test("should return list of movies when the call is successful", () async {
       // Arrange
       final responseJson = {
-        'results': expectedMovies.map((movie) => movie.moviesToJson()).toList()
+        'results': expectedMovies.map((movie) => movie.toJson()).toList()
       };
       when(() => client.get(any())).thenAnswer((_) async => HttpResponse(
             data: jsonEncode(responseJson),
@@ -87,7 +91,7 @@ void main() {
     test("should return list of movies when the call is successful", () async {
       // Arrange
       final responseJson = {
-        'results': expectedMovies.map((movie) => movie.moviesToJson()).toList()
+        'results': expectedMovies.map((movie) => movie.toJson()).toList()
       };
       when(() => client.get(any())).thenAnswer((_) async => HttpResponse(
             data: jsonEncode(responseJson),
@@ -129,7 +133,7 @@ void main() {
     test("should return list of series when the call is successful", () async {
       // Arrange
       final responseJson = {
-        'results': expectedMovies.map((movie) => movie.seriesToJson()).toList()
+        'results': expectedSeries.map((movie) => movie.toJson()).toList()
       };
       when(() => client.get(any())).thenAnswer((_) async => HttpResponse(
             data: jsonEncode(responseJson),
@@ -172,7 +176,7 @@ void main() {
     test("should return list of movies when the call is successful", () async {
       // Arrange
       final responseJson = {
-        'results': expectedMovies.map((movie) => movie.moviesToJson()).toList()
+        'results': expectedMovies.map((movie) => movie.toJson()).toList()
       };
       when(() => client.get(any())).thenAnswer((_) async => HttpResponse(
             data: jsonEncode(responseJson),
@@ -260,7 +264,7 @@ void main() {
         () async {
       // Arrange
       final responseJson = {
-        'results': expectedMovies.map((movie) => movie.moviesToJson()).toList()
+        'results': expectedMovies.map((movie) => movie.toJson()).toList()
       };
       when(() => client.get(any())).thenAnswer((_) async => HttpResponse(
             data: jsonEncode(responseJson),

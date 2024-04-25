@@ -29,27 +29,35 @@ class MovieModel extends MovieEntity {
           movieDetails: movieDetailsModel,
         );
 
-  factory MovieModel.movieFromJson(Map<String, dynamic> json) => MovieModel(
+  factory MovieModel.fromJson(Map<String, dynamic> json) {
+    final isMovie = json['first_air_date'] == null;
+
+    if (isMovie == true) {
+      return MovieModel(
         idModel: json['id'],
         titleModel: json['title'] as String,
         overviewModel: json['overview'] as String,
-        releaseDateModel: json['release_date'] as String,
+        releaseDateModel: json['release_date'],
         posterPathModel: "${ThemovieDBKey.baseUrlImage}${json['poster_path']}",
         voteAverageModel: double.parse((json['vote_average']).toString()),
         movieDetailsModel: null,
       );
+    }
 
-  factory MovieModel.seriesFromJson(Map<String, dynamic> json) => MovieModel(
-        idModel: json['id'],
-        titleModel: json['name'] as String,
-        overviewModel: json['overview'] as String,
-        releaseDateModel: json['first_air_date'],
-        posterPathModel: "${ThemovieDBKey.baseUrlImage}${json['poster_path']}",
-        voteAverageModel: double.parse((json['vote_average']).toString()),
-        movieDetailsModel: null,
-      );
+    return MovieModel(
+      idModel: json['id'],
+      titleModel: json['name'] as String,
+      overviewModel: json['overview'] as String,
+      releaseDateModel: json['first_air_date'],
+      posterPathModel: "${ThemovieDBKey.baseUrlImage}${json['poster_path']}",
+      voteAverageModel: double.parse((json['vote_average']).toString()),
+      movieDetailsModel: null,
+    );
+  }
 
-  Map<String, dynamic> moviesToJson() => {
+  Map<String, dynamic> toJson() {
+    if (releaseDateModel.contains('-')) {
+      return {
         'id': idModel,
         'title': titleModel,
         'overview': overviewModel,
@@ -57,15 +65,17 @@ class MovieModel extends MovieEntity {
         'poster_path': posterPathModel,
         'vote_average': voteAverageModel,
       };
+    }
 
-  Map<String, dynamic> seriesToJson() => {
-        'id': idModel,
-        'name': titleModel,
-        'overview': overviewModel,
-        'first_air_date': releaseDateModel,
-        'poster_path': posterPathModel,
-        'vote_average': voteAverageModel,
-      };
+    return {
+      'id': idModel,
+      'name': titleModel,
+      'overview': overviewModel,
+      'first_air_date': releaseDateModel,
+      'poster_path': posterPathModel,
+      'vote_average': voteAverageModel,
+    };
+  }
 
   MovieModel copy({
     int? id,
