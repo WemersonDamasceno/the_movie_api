@@ -18,7 +18,7 @@ Antes de tudo, configure o ambiente Flutter da sua maquina, veja mais em https:/
 $ git clone https://github.com/WemersonDamasceno/the_movie_api
 
 - Entre na pasta:
-$ cd the_movie_db
+$ cd the_movie_api
 
 - Instale as dependencias:
 $ flutter pub get
