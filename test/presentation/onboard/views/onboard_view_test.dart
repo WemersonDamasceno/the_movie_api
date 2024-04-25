@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:the_movies_db/presentation/onboard/views/onboard_page.dart';
+import 'package:the_movies_api/presentation/onboard/views/onboard_page.dart';
 
 class MockGoRouter extends Mock implements GoRouter {}
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/core/utils/enums/routes_path_enum.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/enums/routes_path_enum.dart';
 
 class AppBarHomeWidget extends StatelessWidget {
   const AppBarHomeWidget({Key? key}) : super(key: key);

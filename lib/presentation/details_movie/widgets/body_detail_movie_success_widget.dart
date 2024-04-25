@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_stars/flutter_rating_stars.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/core/utils/helpers/formatte_text_size.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
-import 'package:the_movies_db/presentation/details_movie/widgets/company_widget.dart';
-import 'package:the_movies_db/presentation/details_movie/widgets/image_detail_widget.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/helpers/formatte_text_size.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/presentation/details_movie/widgets/company_widget.dart';
+import 'package:the_movies_api/presentation/details_movie/widgets/image_detail_widget.dart';
 
 class BodyDetailMoveSuccessWidget extends StatelessWidget {
   final MovieEntity movie;

@@ -1,5 +1,5 @@
-import 'package:the_movies_db/data/models/movie_detail_model.dart';
-import 'package:the_movies_db/data/models/movie_model.dart';
+import 'package:the_movies_api/data/models/movie_detail_model.dart';
+import 'package:the_movies_api/data/models/movie_model.dart';
 
 abstract class MovieDatasource {
   Future<List<MovieModel>> getPopularMovies();

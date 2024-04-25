@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/core/utils/enums/movies_type_enum.dart';
-import 'package:the_movies_db/core/utils/enums/routes_path_enum.dart';
-import 'package:the_movies_db/core/utils/icons/app_images.dart';
-import 'package:the_movies_db/presentation/all_movies_series/views/all_movies_series_view.dart';
-import 'package:the_movies_db/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
-import 'package:the_movies_db/presentation/home/widgets/card_poster_widget.dart';
-import 'package:the_movies_db/presentation/home/widgets/list_movies_popular_or_trending_widget.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/enums/movies_type_enum.dart';
+import 'package:the_movies_api/core/utils/enums/routes_path_enum.dart';
+import 'package:the_movies_api/core/utils/icons/app_images.dart';
+import 'package:the_movies_api/presentation/all_movies_series/views/all_movies_series_view.dart';
+import 'package:the_movies_api/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
+import 'package:the_movies_api/presentation/home/widgets/card_poster_widget.dart';
+import 'package:the_movies_api/presentation/home/widgets/list_movies_popular_or_trending_widget.dart';
 
 class BodyHomeWidget extends StatefulWidget {
   const BodyHomeWidget({Key? key}) : super(key: key);

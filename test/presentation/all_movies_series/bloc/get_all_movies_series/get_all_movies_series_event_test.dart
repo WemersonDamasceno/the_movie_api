@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:the_movies_db/presentation/all_movies_series/bloc/get_all_movies_series/get_all_movies_series_bloc.dart';
+import 'package:the_movies_api/presentation/all_movies_series/bloc/get_all_movies_series/get_all_movies_series_bloc.dart';
 
 void main() {
   late GetAllMoviesSeriesEvent event;

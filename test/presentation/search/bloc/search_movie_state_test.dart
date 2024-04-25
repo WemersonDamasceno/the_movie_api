@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:the_movies_db/core/utils/enums/status_enum.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
-import 'package:the_movies_db/presentation/search/bloc/search_movie_state.dart';
+import 'package:the_movies_api/core/utils/enums/status_enum.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/presentation/search/bloc/search_movie_state.dart';
 
 void main() {
   group('SearchMovieState', () {

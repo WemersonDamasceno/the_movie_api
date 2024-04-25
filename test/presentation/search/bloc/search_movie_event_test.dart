@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:the_movies_db/presentation/search/bloc/search_movie_event.dart';
+import 'package:the_movies_api/presentation/search/bloc/search_movie_event.dart';
 
 void main() {
   group('SearchMovieEvent', () {

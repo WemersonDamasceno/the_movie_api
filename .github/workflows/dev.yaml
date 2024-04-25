@@ -1,4 +1,4 @@
-name: the_movies
+name: the_movies_api
 
 on:
   push:

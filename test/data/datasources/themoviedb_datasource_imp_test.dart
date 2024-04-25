@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:the_movies_db/core/errors/exceptions.dart';
-import 'package:the_movies_db/core/http_client/http_client.dart';
-import 'package:the_movies_db/data/datasources/themoviedb_datasource_imp.dart';
-import 'package:the_movies_db/data/models/companies_model.dart';
-import 'package:the_movies_db/data/models/movie_detail_model.dart';
-import 'package:the_movies_db/data/models/movie_model.dart';
+import 'package:the_movies_api/core/errors/exceptions.dart';
+import 'package:the_movies_api/core/http_client/http_client.dart';
+import 'package:the_movies_api/data/datasources/themoviedb_datasource_imp.dart';
+import 'package:the_movies_api/data/models/companies_model.dart';
+import 'package:the_movies_api/data/models/movie_detail_model.dart';
+import 'package:the_movies_api/data/models/movie_model.dart';
 
 import '../../mocks/companies_mock.dart';
 import '../../mocks/movie_detail_mock.dart';

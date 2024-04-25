@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:the_movies_db/core/utils/constants/app_colors.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/core/utils/enums/status_enum.dart';
-import 'package:the_movies_db/presentation/all_movies_series/bloc/get_all_movies_series/get_all_movies_series_bloc.dart';
-import 'package:the_movies_db/presentation/details_movie/widgets/button_back_widget.dart';
-import 'package:the_movies_db/presentation/widgets/body_error_movies_widget.dart';
-import 'package:the_movies_db/presentation/widgets/body_no_movies_widget.dart';
-import 'package:the_movies_db/presentation/widgets/grid_view_list_movie_widget.dart';
-import 'package:the_movies_db/presentation/widgets/grid_view_loading_movie_widget.dart';
+import 'package:the_movies_api/core/utils/constants/app_colors.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/enums/status_enum.dart';
+import 'package:the_movies_api/presentation/all_movies_series/bloc/get_all_movies_series/get_all_movies_series_bloc.dart';
+import 'package:the_movies_api/presentation/details_movie/widgets/button_back_widget.dart';
+import 'package:the_movies_api/presentation/widgets/body_error_movies_widget.dart';
+import 'package:the_movies_api/presentation/widgets/body_no_movies_widget.dart';
+import 'package:the_movies_api/presentation/widgets/grid_view_list_movie_widget.dart';
+import 'package:the_movies_api/presentation/widgets/grid_view_loading_movie_widget.dart';
 
 enum CategoryEnum { movies, series }
 

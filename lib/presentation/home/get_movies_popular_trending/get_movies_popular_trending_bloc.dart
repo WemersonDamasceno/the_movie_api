@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
-import 'package:the_movies_db/domain/usecases/get_list_popular_movies_usecase.dart';
-import 'package:the_movies_db/domain/usecases/get_list_trending_movies_usecase.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/domain/usecases/get_list_popular_movies_usecase.dart';
+import 'package:the_movies_api/domain/usecases/get_list_trending_movies_usecase.dart';
 
 part 'get_movies_popular_trending_event.dart';
 part 'get_movies_popular_trending_state.dart';

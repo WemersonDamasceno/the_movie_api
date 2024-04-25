@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:the_movies_db/domain/entities/movie_detail_entity.dart';
+import 'package:the_movies_api/domain/entities/movie_detail_entity.dart';
 
 class MovieEntity extends Equatable {
   final int id;

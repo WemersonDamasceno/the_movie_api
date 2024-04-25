@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/core/utils/icons/app_images.dart';
-import 'package:the_movies_db/presentation/widgets/button_large_widget.dart';
-import 'package:the_movies_db/presentation/widgets/text_button_widget.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/icons/app_images.dart';
+import 'package:the_movies_api/presentation/widgets/button_large_widget.dart';
+import 'package:the_movies_api/presentation/widgets/text_button_widget.dart';
 
 class BodyErrorMoviesWidget extends StatelessWidget {
   final VoidCallback onPressedTryAgain;

@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
 
 import '../../mocks/movie_mock.dart';
 

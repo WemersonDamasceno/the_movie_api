@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_movies_db/core/utils/constants/app_colors.dart';
-import 'package:the_movies_db/core/utils/enums/status_enum.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
-import 'package:the_movies_db/presentation/details_movie/bloc/get_movie_by_id_bloc.dart';
-import 'package:the_movies_db/presentation/details_movie/bloc/get_movie_by_id_event.dart';
-import 'package:the_movies_db/presentation/details_movie/bloc/get_movie_by_id_state.dart';
-import 'package:the_movies_db/presentation/details_movie/widgets/body_detail_loading_widget.dart';
-import 'package:the_movies_db/presentation/details_movie/widgets/body_detail_movie_success_widget.dart';
-import 'package:the_movies_db/presentation/details_movie/widgets/button_back_widget.dart';
-import 'package:the_movies_db/presentation/widgets/body_error_movies_widget.dart';
-import 'package:the_movies_db/presentation/widgets/button_large_widget.dart';
+import 'package:the_movies_api/core/utils/constants/app_colors.dart';
+import 'package:the_movies_api/core/utils/enums/status_enum.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_bloc.dart';
+import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_event.dart';
+import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_state.dart';
+import 'package:the_movies_api/presentation/details_movie/widgets/body_detail_loading_widget.dart';
+import 'package:the_movies_api/presentation/details_movie/widgets/body_detail_movie_success_widget.dart';
+import 'package:the_movies_api/presentation/details_movie/widgets/button_back_widget.dart';
+import 'package:the_movies_api/presentation/widgets/body_error_movies_widget.dart';
+import 'package:the_movies_api/presentation/widgets/button_large_widget.dart';
 
 class DetailsMovieView extends StatefulWidget {
   final MovieEntity movieEntity;

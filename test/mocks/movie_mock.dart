@@ -1,5 +1,5 @@
-import 'package:the_movies_db/data/models/movie_model.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/data/models/movie_model.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
 
 class MovieMock {
   static MovieModel model = const MovieModel(

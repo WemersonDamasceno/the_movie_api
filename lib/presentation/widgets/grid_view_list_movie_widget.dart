@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_movies_db/core/utils/enums/routes_path_enum.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
-import 'package:the_movies_db/presentation/home/mixins/item_movie_mixin.dart';
-import 'package:the_movies_db/presentation/home/widgets/item_movie_widget.dart';
+import 'package:the_movies_api/core/utils/enums/routes_path_enum.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/presentation/home/mixins/item_movie_mixin.dart';
+import 'package:the_movies_api/presentation/home/widgets/item_movie_widget.dart';
 
 class GridViewListMovieWidget extends StatelessWidget with ItemMovieMixin {
   final List<MovieEntity> moviesList;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:the_movies_db/core/utils/constants/app_colors.dart';
-import 'package:the_movies_db/injection_container.dart';
-import 'package:the_movies_db/presentation/router/router.dart';
+import 'package:the_movies_api/core/utils/constants/app_colors.dart';
+import 'package:the_movies_api/injection_container.dart';
+import 'package:the_movies_api/presentation/router/router.dart';
 
 void main() async {
   await init();

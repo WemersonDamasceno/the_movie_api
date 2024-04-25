@@ -2,13 +2,13 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:the_movies_db/core/errors/failures.dart';
-import 'package:the_movies_db/core/utils/enums/status_enum.dart';
-import 'package:the_movies_db/domain/entities/movie_detail_entity.dart';
-import 'package:the_movies_db/domain/usecases/get_movie_by_id_widget.dart';
-import 'package:the_movies_db/presentation/details_movie/bloc/get_movie_by_id_bloc.dart';
-import 'package:the_movies_db/presentation/details_movie/bloc/get_movie_by_id_event.dart';
-import 'package:the_movies_db/presentation/details_movie/bloc/get_movie_by_id_state.dart';
+import 'package:the_movies_api/core/errors/failures.dart';
+import 'package:the_movies_api/core/utils/enums/status_enum.dart';
+import 'package:the_movies_api/domain/entities/movie_detail_entity.dart';
+import 'package:the_movies_api/domain/usecases/get_movie_by_id_widget.dart';
+import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_bloc.dart';
+import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_event.dart';
+import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_state.dart';
 
 import '../../../mocks/movie_detail_mock.dart';
 

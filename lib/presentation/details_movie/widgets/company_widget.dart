@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_movies_db/domain/entities/companies_entity.dart';
+import 'package:the_movies_api/domain/entities/companies_entity.dart';
 
 class CompanyWidget extends StatelessWidget {
   final CompaniesEntity company;

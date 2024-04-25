@@ -1,5 +1,5 @@
-import 'package:the_movies_db/data/models/companies_model.dart';
-import 'package:the_movies_db/domain/entities/companies_entity.dart';
+import 'package:the_movies_api/data/models/companies_model.dart';
+import 'package:the_movies_api/domain/entities/companies_entity.dart';
 
 class CompaniesMock {
   static CompaniesModel model = const CompaniesModel(

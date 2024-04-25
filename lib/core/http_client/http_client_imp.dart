@@ -1,5 +1,5 @@
 import 'package:http/http.dart' as http;
-import 'package:the_movies_db/core/http_client/http_client.dart';
+import 'package:the_movies_api/core/http_client/http_client.dart';
 
 class HttpClientImp implements HttpClient {
   @override

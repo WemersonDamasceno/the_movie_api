@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:the_movies_db/core/utils/enums/status_enum.dart';
-import 'package:the_movies_db/domain/entities/movie_detail_entity.dart';
+import 'package:the_movies_api/core/utils/enums/status_enum.dart';
+import 'package:the_movies_api/domain/entities/movie_detail_entity.dart';
 
 class GetMovieByIdState extends Equatable {
   final MovieDetailsEntity? movie;
