@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_movies_db/core/utils/enums/routes_path_enum.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
-import 'package:the_movies_db/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
-import 'package:the_movies_db/presentation/home/mixins/item_movie_mixin.dart';
-import 'package:the_movies_db/presentation/home/widgets/item_movie_widget.dart';
+import 'package:the_movies_api/core/utils/enums/routes_path_enum.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
+import 'package:the_movies_api/presentation/home/mixins/item_movie_mixin.dart';
+import 'package:the_movies_api/presentation/home/widgets/item_movie_widget.dart';
 
 class ListMovieWidget extends StatefulWidget {
   final List<MovieEntity> moviesList;

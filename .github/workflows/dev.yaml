@@ -1,4 +1,4 @@
-name: the_movie_db
+name: the_movies_api
 
 on:
   push:

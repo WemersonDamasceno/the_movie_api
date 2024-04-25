@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_movies_db/presentation/widgets/loading_item_widget.dart';
+import 'package:the_movies_api/presentation/widgets/loading_item_widget.dart';
 
 class SkeletonMovieWidget extends StatelessWidget {
   const SkeletonMovieWidget({Key? key}) : super(key: key);

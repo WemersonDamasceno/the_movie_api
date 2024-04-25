@@ -1,11 +1,11 @@
 import 'package:go_router/go_router.dart';
-import 'package:the_movies_db/core/utils/enums/routes_path_enum.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
-import 'package:the_movies_db/presentation/all_movies_series/views/all_movies_series_page.dart';
-import 'package:the_movies_db/presentation/details_movie/views/details_movie_page.dart';
-import 'package:the_movies_db/presentation/home/views/home_page.dart';
-import 'package:the_movies_db/presentation/onboard/views/onboard_page.dart';
-import 'package:the_movies_db/presentation/search/views/search_page.dart';
+import 'package:the_movies_api/core/utils/enums/routes_path_enum.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/presentation/all_movies_series/views/all_movies_series_page.dart';
+import 'package:the_movies_api/presentation/details_movie/views/details_movie_page.dart';
+import 'package:the_movies_api/presentation/home/views/home_page.dart';
+import 'package:the_movies_api/presentation/onboard/views/onboard_page.dart';
+import 'package:the_movies_api/presentation/search/views/search_page.dart';
 
 final GoRouter router = GoRouter(
   initialLocation: RoutesPathEnum.onboard.path,

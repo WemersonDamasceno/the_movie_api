@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:the_movies_db/core/utils/constants/app_colors.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/core/utils/enums/routes_path_enum.dart';
-import 'package:the_movies_db/core/utils/icons/app_images.dart';
-import 'package:the_movies_db/presentation/widgets/button_large_widget.dart';
+import 'package:the_movies_api/core/utils/constants/app_colors.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/enums/routes_path_enum.dart';
+import 'package:the_movies_api/core/utils/icons/app_images.dart';
+import 'package:the_movies_api/presentation/widgets/button_large_widget.dart';
 
 class OnboardView extends StatelessWidget {
   const OnboardView({Key? key}) : super(key: key);

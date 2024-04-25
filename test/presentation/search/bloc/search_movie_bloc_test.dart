@@ -2,13 +2,13 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:the_movies_db/core/errors/failures.dart';
-import 'package:the_movies_db/core/utils/enums/status_enum.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
-import 'package:the_movies_db/domain/usecases/search_movie_usecase.dart';
-import 'package:the_movies_db/presentation/search/bloc/search_movie_bloc.dart';
-import 'package:the_movies_db/presentation/search/bloc/search_movie_event.dart';
-import 'package:the_movies_db/presentation/search/bloc/search_movie_state.dart';
+import 'package:the_movies_api/core/errors/failures.dart';
+import 'package:the_movies_api/core/utils/enums/status_enum.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/domain/usecases/search_movie_usecase.dart';
+import 'package:the_movies_api/presentation/search/bloc/search_movie_bloc.dart';
+import 'package:the_movies_api/presentation/search/bloc/search_movie_event.dart';
+import 'package:the_movies_api/presentation/search/bloc/search_movie_state.dart';
 
 import '../../../mocks/movie_mock.dart';
 

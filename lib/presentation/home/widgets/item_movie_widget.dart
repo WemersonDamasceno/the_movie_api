@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/core/utils/helpers/date_formatter.dart';
-import 'package:the_movies_db/presentation/home/mixins/item_movie_mixin.dart';
-import 'package:the_movies_db/presentation/home/widgets/percente_average_widget.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/helpers/date_formatter.dart';
+import 'package:the_movies_api/presentation/home/mixins/item_movie_mixin.dart';
+import 'package:the_movies_api/presentation/home/widgets/percente_average_widget.dart';
 
 class ItemMovieWidget extends StatelessWidget with ItemMovieMixin {
   final String title;

@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:the_movies_db/core/errors/failures.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
-import 'package:the_movies_db/domain/repositories/movie_repository.dart';
-import 'package:the_movies_db/domain/usecases/get_all_movies_or_series_usecase.dart';
+import 'package:the_movies_api/core/errors/failures.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/domain/repositories/movie_repository.dart';
+import 'package:the_movies_api/domain/usecases/get_all_movies_or_series_usecase.dart';
 
 class MockMovieRepository extends Mock implements MovieRepository {}
 

@@ -1,5 +1,5 @@
-import 'package:the_movies_db/core/utils/keys/themoviedb_key.dart';
-import 'package:the_movies_db/domain/entities/companies_entity.dart';
+import 'package:the_movies_api/core/utils/keys/themoviedb_key.dart';
+import 'package:the_movies_api/domain/entities/companies_entity.dart';
 
 class CompaniesModel extends CompaniesEntity {
   final int idModel;

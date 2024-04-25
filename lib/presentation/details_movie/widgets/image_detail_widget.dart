@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/core/utils/enums/status_movie_enum.dart';
-import 'package:the_movies_db/presentation/details_movie/widgets/backdrop_image_widget.dart';
-import 'package:the_movies_db/presentation/details_movie/widgets/image_path_widget.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/enums/status_movie_enum.dart';
+import 'package:the_movies_api/presentation/details_movie/widgets/backdrop_image_widget.dart';
+import 'package:the_movies_api/presentation/details_movie/widgets/image_path_widget.dart';
 
 class ImageDetailWidget extends StatelessWidget {
   final String posterPath;

@@ -2,18 +2,18 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:the_movies_db/core/utils/constants/app_colors.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/core/utils/enums/status_enum.dart';
-import 'package:the_movies_db/presentation/details_movie/widgets/button_back_widget.dart';
-import 'package:the_movies_db/presentation/search/bloc/search_movie_bloc.dart';
-import 'package:the_movies_db/presentation/search/bloc/search_movie_event.dart';
-import 'package:the_movies_db/presentation/search/bloc/search_movie_state.dart';
-import 'package:the_movies_db/presentation/search/widgets/search_input_widget.dart';
-import 'package:the_movies_db/presentation/widgets/body_error_movies_widget.dart';
-import 'package:the_movies_db/presentation/widgets/body_no_movies_widget.dart';
-import 'package:the_movies_db/presentation/widgets/grid_view_list_movie_widget.dart';
-import 'package:the_movies_db/presentation/widgets/grid_view_loading_movie_widget.dart';
+import 'package:the_movies_api/core/utils/constants/app_colors.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/enums/status_enum.dart';
+import 'package:the_movies_api/presentation/details_movie/widgets/button_back_widget.dart';
+import 'package:the_movies_api/presentation/search/bloc/search_movie_bloc.dart';
+import 'package:the_movies_api/presentation/search/bloc/search_movie_event.dart';
+import 'package:the_movies_api/presentation/search/bloc/search_movie_state.dart';
+import 'package:the_movies_api/presentation/search/widgets/search_input_widget.dart';
+import 'package:the_movies_api/presentation/widgets/body_error_movies_widget.dart';
+import 'package:the_movies_api/presentation/widgets/body_no_movies_widget.dart';
+import 'package:the_movies_api/presentation/widgets/grid_view_list_movie_widget.dart';
+import 'package:the_movies_api/presentation/widgets/grid_view_loading_movie_widget.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({Key? key}) : super(key: key);

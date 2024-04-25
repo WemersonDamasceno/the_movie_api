@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:the_movies_db/core/utils/constants/app_colors.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
-import 'package:the_movies_db/presentation/home/mixins/item_movie_mixin.dart';
+import 'package:the_movies_api/core/utils/constants/app_colors.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/presentation/home/mixins/item_movie_mixin.dart';
 
 class PercentAverageWidget extends StatelessWidget with ItemMovieMixin {
   final int voteAverage;

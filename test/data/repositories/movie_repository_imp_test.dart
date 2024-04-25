@@ -1,14 +1,14 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:the_movies_db/core/errors/exceptions.dart';
-import 'package:the_movies_db/core/errors/failures.dart';
-import 'package:the_movies_db/core/utils/enums/status_movie_enum.dart';
-import 'package:the_movies_db/data/datasources/movie_datasource.dart';
-import 'package:the_movies_db/data/models/movie_detail_model.dart';
-import 'package:the_movies_db/data/models/movie_model.dart';
-import 'package:the_movies_db/data/repositories/movie_repository_imp.dart';
-import 'package:the_movies_db/domain/repositories/movie_repository.dart';
+import 'package:the_movies_api/core/errors/exceptions.dart';
+import 'package:the_movies_api/core/errors/failures.dart';
+import 'package:the_movies_api/core/utils/enums/status_movie_enum.dart';
+import 'package:the_movies_api/data/datasources/movie_datasource.dart';
+import 'package:the_movies_api/data/models/movie_detail_model.dart';
+import 'package:the_movies_api/data/models/movie_model.dart';
+import 'package:the_movies_api/data/repositories/movie_repository_imp.dart';
+import 'package:the_movies_api/domain/repositories/movie_repository.dart';
 
 class MockMovieDatasource extends Mock implements MovieDatasource {}
 

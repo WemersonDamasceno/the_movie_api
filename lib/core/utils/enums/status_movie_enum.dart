@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_movies_db/core/utils/constants/app_colors.dart';
+import 'package:the_movies_api/core/utils/constants/app_colors.dart';
 
 enum StatusMovieEnum {
   released(name: "Released"),

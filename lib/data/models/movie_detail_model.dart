@@ -1,7 +1,7 @@
-import 'package:the_movies_db/core/utils/enums/status_movie_enum.dart';
-import 'package:the_movies_db/core/utils/keys/themoviedb_key.dart';
-import 'package:the_movies_db/data/models/companies_model.dart';
-import 'package:the_movies_db/domain/entities/movie_detail_entity.dart';
+import 'package:the_movies_api/core/utils/enums/status_movie_enum.dart';
+import 'package:the_movies_api/core/utils/keys/themoviedb_key.dart';
+import 'package:the_movies_api/data/models/companies_model.dart';
+import 'package:the_movies_api/domain/entities/movie_detail_entity.dart';
 
 class MovieDetailModel extends MovieDetailsEntity {
   final String backdropPathModel;

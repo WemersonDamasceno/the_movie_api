@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_movies_db/core/utils/constants/custom_styles.dart';
+import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
 
 class ButtonLargeWidget extends StatelessWidget {
   final String label;

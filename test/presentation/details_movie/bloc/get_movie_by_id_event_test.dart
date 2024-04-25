@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:the_movies_db/presentation/details_movie/bloc/get_movie_by_id_event.dart';
+import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_event.dart';
 
 void main() {
   group('GetMovieByIdEvent', () {

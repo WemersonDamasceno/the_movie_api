@@ -2,9 +2,9 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:the_movies_db/domain/usecases/get_list_popular_movies_usecase.dart';
-import 'package:the_movies_db/domain/usecases/get_list_trending_movies_usecase.dart';
-import 'package:the_movies_db/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
+import 'package:the_movies_api/domain/usecases/get_list_popular_movies_usecase.dart';
+import 'package:the_movies_api/domain/usecases/get_list_trending_movies_usecase.dart';
+import 'package:the_movies_api/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
 
 class MockGetPopularMoviesUseCase extends Mock
     implements GetPopularMoviesUseCase {}

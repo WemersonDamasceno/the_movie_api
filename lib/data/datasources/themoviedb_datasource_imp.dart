@@ -1,12 +1,12 @@
 import 'dart:convert';
 
-import 'package:the_movies_db/core/errors/exceptions.dart';
-import 'package:the_movies_db/core/http_client/http_client.dart';
-import 'package:the_movies_db/core/utils/constants/themoviedb_endpoints.dart';
-import 'package:the_movies_db/core/utils/keys/themoviedb_key.dart';
-import 'package:the_movies_db/data/datasources/movie_datasource.dart';
-import 'package:the_movies_db/data/models/movie_detail_model.dart';
-import 'package:the_movies_db/data/models/movie_model.dart';
+import 'package:the_movies_api/core/errors/exceptions.dart';
+import 'package:the_movies_api/core/http_client/http_client.dart';
+import 'package:the_movies_api/core/utils/constants/themoviedb_endpoints.dart';
+import 'package:the_movies_api/core/utils/keys/themoviedb_key.dart';
+import 'package:the_movies_api/data/datasources/movie_datasource.dart';
+import 'package:the_movies_api/data/models/movie_detail_model.dart';
+import 'package:the_movies_api/data/models/movie_model.dart';
 
 class TheMoviedbDatasourceImp implements MovieDatasource {
   final HttpClient client;

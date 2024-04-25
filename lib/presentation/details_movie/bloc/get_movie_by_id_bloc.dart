@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:the_movies_db/core/utils/enums/status_enum.dart';
-import 'package:the_movies_db/domain/usecases/get_movie_by_id_widget.dart';
-import 'package:the_movies_db/presentation/details_movie/bloc/get_movie_by_id_event.dart';
-import 'package:the_movies_db/presentation/details_movie/bloc/get_movie_by_id_state.dart';
+import 'package:the_movies_api/core/utils/enums/status_enum.dart';
+import 'package:the_movies_api/domain/usecases/get_movie_by_id_widget.dart';
+import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_event.dart';
+import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_state.dart';
 
 class GetMovieByIdBloc extends Bloc<GetMovieByIdEvent, GetMovieByIdState> {
   final GetMovieByIdUsecase getMovieByIdUsecase;

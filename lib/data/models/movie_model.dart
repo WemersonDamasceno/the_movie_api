@@ -1,6 +1,6 @@
-import 'package:the_movies_db/core/utils/keys/themoviedb_key.dart';
-import 'package:the_movies_db/data/models/movie_detail_model.dart';
-import 'package:the_movies_db/domain/entities/movie_entity.dart';
+import 'package:the_movies_api/core/utils/keys/themoviedb_key.dart';
+import 'package:the_movies_api/data/models/movie_detail_model.dart';
+import 'package:the_movies_api/domain/entities/movie_entity.dart';
 
 class MovieModel extends MovieEntity {
   final int idModel;
