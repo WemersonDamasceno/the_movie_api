@@ -3,8 +3,10 @@
 
  
 # Telas implementadas
+ 
 
-https://github.com/WemersonDamasceno/the_movie_db/assets/37156004/64d91a95-7906-44d4-9659-a28141ff213d
+https://github.com/WemersonDamasceno/the_movie_api/assets/37156004/2cf140e0-5ff7-4c0d-8b73-f278fabc5479
+
 
 
 
@@ -13,7 +15,7 @@ https://github.com/WemersonDamasceno/the_movie_db/assets/37156004/64d91a95-7906-
 Antes de tudo, configure o ambiente Flutter da sua maquina, veja mais em https://flutter.dev/docs/get-started/install
 
 - Faça o clone do repositório:
-$ git clone https://github.com/WemersonDamasceno/the_movie_db
+$ git clone https://github.com/WemersonDamasceno/the_movie
 
 - Entre na pasta:
 $ cd the_movie_db
@@ -24,5 +26,5 @@ $ flutter pub get
 - Execute o App com o comando: 
 $ flutter run
 
-
+O app pode ser baixado aqui: https://drive.google.com/file/d/1ZMeDHhdDrAcg66CNDtRjxEZnchV_LDNC/view?usp=sharing
 Made with :heart: and Flutter.
