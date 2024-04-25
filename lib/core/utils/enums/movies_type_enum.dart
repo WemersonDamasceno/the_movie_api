@@ -1,0 +1,4 @@
+enum MoviesTypeEnum {
+  popularMovies,
+  trendingMovies,
+}
