@@ -44,7 +44,9 @@ A API do <a href="https://developer.themoviedb.org/docs/getting-started">The Mov
 # Telas implementadas
  
 
-https://github.com/WemersonDamasceno/the_movie_api/assets/37156004/ce81673b-a166-445e-bb2b-3f62ce311873
+https://github.com/WemersonDamasceno/the_movie_api/assets/37156004/e52477c4-c5a9-425a-8d1e-ae57acecf47c
+
+
 
 
 
