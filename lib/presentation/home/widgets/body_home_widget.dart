@@ -6,7 +6,7 @@ import 'package:the_movies_api/core/utils/enums/movies_type_enum.dart';
 import 'package:the_movies_api/core/utils/enums/routes_path_enum.dart';
 import 'package:the_movies_api/core/utils/icons/app_images.dart';
 import 'package:the_movies_api/presentation/all_movies_series/views/all_movies_series_view.dart';
-import 'package:the_movies_api/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
+import 'package:the_movies_api/presentation/home/bloc/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
 import 'package:the_movies_api/presentation/home/widgets/card_poster_widget.dart';
 import 'package:the_movies_api/presentation/home/widgets/list_movies_popular_or_trending_widget.dart';
 
