@@ -70,6 +70,7 @@ class _SearchViewState extends State<SearchView> {
                   ),
                   const SizedBox(height: 10),
                   SearchInputWidget(
+                    key: const ValueKey("search-input"),
                     inputController: _inputController,
                     onSearch: (value) {
                       _debounce.cancel();

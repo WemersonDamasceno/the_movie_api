@@ -64,6 +64,7 @@ class _ListMovieWidgetState extends State<ListMovieWidget> with ItemMovieMixin {
         itemBuilder: (_, index) {
           final MovieEntity movie = widget.moviesList[index];
           return InkWell(
+            key: ValueKey("movie-$index"),
             onTap: () {
               GoRouter.of(context).pushNamed(
                 RoutesPathEnum.detailsMovie.name,

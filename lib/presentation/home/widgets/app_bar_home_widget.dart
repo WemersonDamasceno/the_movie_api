@@ -8,6 +8,7 @@ class AppBarHomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      key: const ValueKey("search-button"),
       onTap: () => GoRouter.of(context).pushNamed(
         RoutesPathEnum.search.name,
       ),
