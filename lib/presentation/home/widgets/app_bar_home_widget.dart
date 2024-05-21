@@ -8,7 +8,6 @@ class AppBarHomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      key: const ValueKey("search-button"),
       onTap: () => GoRouter.of(context).pushNamed(
         RoutesPathEnum.search.name,
       ),
@@ -39,6 +38,7 @@ class AppBarHomeWidget extends StatelessWidget {
                   ),
                 ),
                 child: Text(
+                  key: const ValueKey("search-button"),
                   "Enter the name of the movie.",
                   style: CustomStyles.styleTextSubtitle.copyWith(
                     color: Colors.grey,

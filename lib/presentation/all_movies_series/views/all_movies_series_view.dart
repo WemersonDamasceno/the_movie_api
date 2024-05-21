@@ -96,8 +96,9 @@ class _AllMoviesSeriesViewState extends State<AllMoviesSeriesView> {
                         );
                       default:
                         return SizedBox(
-                            height: size.height,
-                            child: const GridViewLoadingMovieWidget());
+                          height: size.height,
+                          child: const GridViewLoadingMovieWidget(),
+                        );
                     }
                   },
                 ),

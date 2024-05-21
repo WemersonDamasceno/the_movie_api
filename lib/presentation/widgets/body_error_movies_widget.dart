@@ -23,7 +23,7 @@ class BodyErrorMoviesWidget extends StatelessWidget {
         children: [
           SizedBox(
             width: size.width * .8,
-            child: LottieBuilder.asset(AppImages.error),
+            child: LottieBuilder.asset(AppImages.empty),
           ),
           const Text(
             'Ops! Parece que aconteceu um erro!',

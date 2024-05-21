@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
 import 'package:the_movies_api/core/utils/icons/app_images.dart';
 
@@ -17,7 +16,7 @@ class BodyNoMoviesWidget extends StatelessWidget {
         children: [
           SizedBox(
             width: size.width * .8,
-            child: LottieBuilder.asset(AppImages.error),
+            child: Image.asset(AppImages.empty),
           ),
           const Text(
             'No movies to show.',

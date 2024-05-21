@@ -64,17 +64,20 @@ class _SearchViewState extends State<SearchView> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    "Search for a movie",
-                    style: CustomStyles.styleTextTopic,
+                  GestureDetector(
+                    key: ValueKey('unfocus-search'),
+                    onTap: () => FocusScope.of(context).unfocus(),
+                    child: const Text(
+                      "Search for a movie",
+                      style: CustomStyles.styleTextTopic,
+                    ),
                   ),
                   const SizedBox(height: 10),
                   SearchInputWidget(
-                    key: const ValueKey("search-input"),
                     inputController: _inputController,
                     onSearch: (value) {
                       _debounce.cancel();
-                      _debounce = Timer(const Duration(milliseconds: 500), () {
+                      _debounce = Timer(const Duration(milliseconds: 800), () {
                         _searchMovieBloc.add(SearchMovie(value));
                       });
                     },

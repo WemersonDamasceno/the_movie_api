@@ -6,32 +6,34 @@ class BodyDetailLoadingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Column(
-      children: [
-        LoadingItemWidget(
-          width: MediaQuery.of(context).size.width,
-          height: size.height * 0.3,
-          radius: 7,
-        ),
-        const SizedBox(height: 16),
-        LoadingItemWidget(
-          width: MediaQuery.of(context).size.width * 0.9,
-          height: 80,
-          radius: 7,
-        ),
-        const SizedBox(height: 16),
-        LoadingItemWidget(
-          width: MediaQuery.of(context).size.width * 0.9,
-          height: size.height * 0.4,
-          radius: 7,
-        ),
-        const SizedBox(height: 16),
-        LoadingItemWidget(
-          width: MediaQuery.of(context).size.width * 0.9,
-          height: 50,
-          radius: 7,
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          LoadingItemWidget(
+            width: MediaQuery.of(context).size.width,
+            height: size.height * 0.3,
+            radius: 7,
+          ),
+          const SizedBox(height: 16),
+          LoadingItemWidget(
+            width: MediaQuery.of(context).size.width * 0.9,
+            height: 80,
+            radius: 7,
+          ),
+          const SizedBox(height: 16),
+          LoadingItemWidget(
+            width: MediaQuery.of(context).size.width * 0.9,
+            height: size.height * 0.4,
+            radius: 7,
+          ),
+          const SizedBox(height: 16),
+          LoadingItemWidget(
+            width: MediaQuery.of(context).size.width * 0.9,
+            height: 50,
+            radius: 7,
+          ),
+        ],
+      ),
     );
   }
 }

@@ -26,6 +26,7 @@ class SearchInputWidget extends StatelessWidget {
         ),
       ),
       child: TextField(
+        key: const ValueKey("search-input"),
         controller: inputController,
         cursorColor: Colors.grey,
         style: CustomStyles.styleTitle,
