@@ -6,7 +6,7 @@ import 'package:the_movies_api/core/utils/enums/movies_type_enum.dart';
 import 'package:the_movies_api/core/utils/enums/routes_path_enum.dart';
 import 'package:the_movies_api/core/utils/icons/app_images.dart';
 import 'package:the_movies_api/presentation/all_movies_series/views/all_movies_series_view.dart';
-import 'package:the_movies_api/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
+import 'package:the_movies_api/presentation/home/bloc/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
 import 'package:the_movies_api/presentation/home/widgets/card_poster_widget.dart';
 import 'package:the_movies_api/presentation/home/widgets/list_movies_popular_or_trending_widget.dart';
 
@@ -18,7 +18,7 @@ class BodyHomeWidget extends StatefulWidget {
 }
 
 class _BodyHomeWidgetState extends State<BodyHomeWidget> {
-  late GetMoviesPopularTrendingBloc blocContext;
+  late GetMoviesPopularTrendingBloc getMoviesPopularTredingBloc;
   @override
   void initState() {
     initBloc(context);
@@ -26,8 +26,9 @@ class _BodyHomeWidgetState extends State<BodyHomeWidget> {
   }
 
   initBloc(BuildContext context) {
-    blocContext = BlocProvider.of<GetMoviesPopularTrendingBloc>(context);
-    blocContext.add(const PopularMoviesLoadEvent());
+    getMoviesPopularTredingBloc =
+        BlocProvider.of<GetMoviesPopularTrendingBloc>(context);
+    getMoviesPopularTredingBloc.add(const PopularMoviesLoadEvent());
   }
 
   @override
@@ -50,6 +51,7 @@ class _BodyHomeWidgetState extends State<BodyHomeWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CardPosterWidget(
+                    key: ValueKey('allMovies'),
                     label: 'All Movies',
                     image: AppImages.movie,
                     colorInital: const Color(0xff16CAF1),
@@ -60,6 +62,7 @@ class _BodyHomeWidgetState extends State<BodyHomeWidget> {
                     ),
                   ),
                   CardPosterWidget(
+                    key: ValueKey('allSeries'),
                     label: 'All Series',
                     image: AppImages.anime,
                     colorInital: const Color(0xffFF2E2E),

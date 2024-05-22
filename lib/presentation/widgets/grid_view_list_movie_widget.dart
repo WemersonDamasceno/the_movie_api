@@ -28,6 +28,7 @@ class GridViewListMovieWidget extends StatelessWidget with ItemMovieMixin {
         itemBuilder: (_, index) {
           final MovieEntity movie = moviesList[index];
           return InkWell(
+            key: ValueKey('movie-$index'),
             onTap: () {
               GoRouter.of(context).pushNamed(
                 RoutesPathEnum.detailsMovie.name,

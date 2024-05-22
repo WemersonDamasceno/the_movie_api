@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:the_movies_api/core/utils/enums/routes_path_enum.dart';
 import 'package:the_movies_api/domain/entities/movie_entity.dart';
-import 'package:the_movies_api/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
+import 'package:the_movies_api/presentation/home/bloc/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
 import 'package:the_movies_api/presentation/home/mixins/item_movie_mixin.dart';
 import 'package:the_movies_api/presentation/home/widgets/item_movie_widget.dart';
 
@@ -64,6 +64,7 @@ class _ListMovieWidgetState extends State<ListMovieWidget> with ItemMovieMixin {
         itemBuilder: (_, index) {
           final MovieEntity movie = widget.moviesList[index];
           return InkWell(
+            key: ValueKey("movie-$index"),
             onTap: () {
               GoRouter.of(context).pushNamed(
                 RoutesPathEnum.detailsMovie.name,

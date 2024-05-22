@@ -38,6 +38,7 @@ class AppBarHomeWidget extends StatelessWidget {
                   ),
                 ),
                 child: Text(
+                  key: const ValueKey("search-button"),
                   "Enter the name of the movie.",
                   style: CustomStyles.styleTextSubtitle.copyWith(
                     color: Colors.grey,

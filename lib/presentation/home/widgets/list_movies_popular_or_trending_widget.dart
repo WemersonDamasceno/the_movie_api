@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_movies_api/core/utils/constants/custom_styles.dart';
 import 'package:the_movies_api/core/utils/enums/movies_type_enum.dart';
-import 'package:the_movies_api/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
+import 'package:the_movies_api/presentation/home/bloc/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
 import 'package:the_movies_api/presentation/home/widgets/list_movies_widget.dart';
 import 'package:the_movies_api/presentation/home/widgets/skeleton_movie_widget.dart';
 

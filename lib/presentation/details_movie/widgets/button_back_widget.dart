@@ -13,6 +13,7 @@ class ButtonBackWidget extends StatelessWidget {
       child: Align(
         alignment: Alignment.topLeft,
         child: ElevatedButton(
+          key: const ValueKey('back-app-bar'),
           style: ElevatedButton.styleFrom(
             shape: const CircleBorder(),
           ),

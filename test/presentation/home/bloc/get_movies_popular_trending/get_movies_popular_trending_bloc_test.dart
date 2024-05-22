@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:the_movies_api/domain/usecases/get_list_popular_movies_usecase.dart';
 import 'package:the_movies_api/domain/usecases/get_list_trending_movies_usecase.dart';
-import 'package:the_movies_api/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
+import 'package:the_movies_api/presentation/home/bloc/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
 
 class MockGetPopularMoviesUseCase extends Mock
     implements GetPopularMoviesUseCase {}

@@ -12,7 +12,7 @@ import 'package:the_movies_api/domain/usecases/get_movie_by_id_widget.dart';
 import 'package:the_movies_api/domain/usecases/search_movie_usecase.dart';
 import 'package:the_movies_api/presentation/all_movies_series/bloc/get_all_movies_series/get_all_movies_series_bloc.dart';
 import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_bloc.dart';
-import 'package:the_movies_api/presentation/home/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
+import 'package:the_movies_api/presentation/home/bloc/get_movies_popular_trending/get_movies_popular_trending_bloc.dart';
 import 'package:the_movies_api/presentation/search/bloc/search_movie_bloc.dart';
 
 final getIt = GetIt.instance;

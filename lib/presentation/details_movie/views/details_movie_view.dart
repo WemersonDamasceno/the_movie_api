@@ -80,6 +80,7 @@ class _DetailsMovieViewState extends State<DetailsMovieView> {
               left: 16,
               right: 16,
               child: ButtonLargeWidget(
+                key: const ValueKey("back-home"),
                 label: "Home page",
                 onPressed: () => GoRouter.of(context).pop(),
               ),
