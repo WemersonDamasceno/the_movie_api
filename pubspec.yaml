@@ -23,10 +23,11 @@ dependencies:
   go_router: ^13.2.3 # https://pub.dev/packages/go_router
   golden_toolkit: ^0.15.0 # https://pub.dev/packages/golden_toolkit
   http: ^0.13.4 # https://pub.dev/packages/http
-  intl: ^0.18.1 # https://pub.dev/packages/intl
+  intl: ^0.19.0 # https://pub.dev/packages/intl
   lottie: ^3.0.0 # https://pub.dev/packages/lottie
   percent_indicator: any # https://pub.dev/packages/percent_indicator
   shimmer: ^3.0.0 # https://pub.dev/packages/shimmer
+  dartdoc: ^8.0.8 # https://pub.dev/packages/dartdoc
 
 dev_dependencies:
   flutter_test:
