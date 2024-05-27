@@ -10,7 +10,7 @@ jobs:
     uses: ./.github/workflows/flutter_package.yaml
     with:
       flutter_channel: 'stable'
-      flutter_version: '3.19.5'
+      flutter_version: '3.22.0'
       min_coverage: 10 
       runs_on: ubuntu-latest  # Adicione esta linha para passar o parâmetro runs_on
 

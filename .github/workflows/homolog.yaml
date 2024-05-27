@@ -10,7 +10,7 @@ jobs:
     uses: ./.github/workflows/flutter_package.yaml
     with:
       flutter_channel: 'stable'
-      flutter_version: '3.19.5'
+      flutter_version: '3.22.0'
       min_coverage: 75
     # secrets:
     #   ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
