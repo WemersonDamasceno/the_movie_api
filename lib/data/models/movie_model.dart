@@ -1,4 +1,4 @@
-import 'package:the_movies_api/core/utils/keys/themoviedb_key.dart';
+import 'package:the_movies_api/core/utils/constants/the_movie_constants.dart';
 import 'package:the_movies_api/data/models/movie_detail_model.dart';
 import 'package:the_movies_api/domain/entities/movie_entity.dart';
 
@@ -38,7 +38,8 @@ class MovieModel extends MovieEntity {
         titleModel: json['title'] as String,
         overviewModel: json['overview'] as String,
         releaseDateModel: json['release_date'],
-        posterPathModel: "${ThemovieDBKey.baseUrlImage}${json['poster_path']}",
+        posterPathModel:
+            "${TheMoviesConstants.baseUrlImage}${json['poster_path']}",
         voteAverageModel: double.parse((json['vote_average']).toString()),
         movieDetailsModel: null,
       );
@@ -49,7 +50,8 @@ class MovieModel extends MovieEntity {
       titleModel: json['name'] as String,
       overviewModel: json['overview'] as String,
       releaseDateModel: json['first_air_date'],
-      posterPathModel: "${ThemovieDBKey.baseUrlImage}${json['poster_path']}",
+      posterPathModel:
+          "${TheMoviesConstants.baseUrlImage}${json['poster_path']}",
       voteAverageModel: double.parse((json['vote_average']).toString()),
       movieDetailsModel: null,
     );

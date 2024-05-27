@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:the_movies_api/core/errors/exceptions.dart';
 import 'package:the_movies_api/core/http_client/http_client.dart';
 import 'package:the_movies_api/core/utils/constants/themoviedb_endpoints.dart';
-import 'package:the_movies_api/core/utils/keys/themoviedb_key.dart';
+import 'package:the_movies_api/core/utils/keys/the_movie_key.dart';
 import 'package:the_movies_api/data/datasources/movie_datasource.dart';
 import 'package:the_movies_api/data/models/movie_detail_model.dart';
 import 'package:the_movies_api/data/models/movie_model.dart';
@@ -18,7 +18,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
   @override
   Future<List<MovieModel>> getPopularMovies() async {
     final response = await client.get(
-      TheMoviedbEndpoints.popularMovies(ThemovieDBKey.apiKey, currentPage),
+      TheMoviedbEndpoints.popularMovies(TheMovieKey.apiKey, currentPage),
     );
     if (response.statusCode == 200) {
       var json = jsonDecode(response.data);
@@ -39,7 +39,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
   @override
   Future<List<MovieModel>> getTrendingMovies() async {
     final response = await client.get(
-      TheMoviedbEndpoints.trendingMovies(ThemovieDBKey.apiKey),
+      TheMoviedbEndpoints.trendingMovies(TheMovieKey.apiKey),
     );
     if (response.statusCode == 200) {
       var json = jsonDecode(response.data);
@@ -61,7 +61,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
   Future<List<MovieModel>> getAllSeries() async {
     final List<MovieModel> listAllSeries = [];
     final response = await client.get(
-      TheMoviedbEndpoints.getAllSeries(ThemovieDBKey.apiKey),
+      TheMoviedbEndpoints.getAllSeries(TheMovieKey.apiKey),
     );
     if (response.statusCode == 200) {
       var json = jsonDecode(response.data);
@@ -82,7 +82,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
   Future<List<MovieModel>> getAllMovies() async {
     final List<MovieModel> listAllMovies = [];
     final response = await client.get(
-      TheMoviedbEndpoints.getAllMovies(ThemovieDBKey.apiKey),
+      TheMoviedbEndpoints.getAllMovies(TheMovieKey.apiKey),
     );
     if (response.statusCode == 200) {
       var json = jsonDecode(response.data);
@@ -102,7 +102,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
   @override
   Future<MovieDetailModel> getMovieDetail(int id) async {
     final response = await client.get(
-      TheMoviedbEndpoints.movieDetail(ThemovieDBKey.apiKey, id),
+      TheMoviedbEndpoints.movieDetail(TheMovieKey.apiKey, id),
     );
     if (response.statusCode == 200) {
       var json = jsonDecode(response.data);
@@ -119,7 +119,7 @@ class TheMoviedbDatasourceImp implements MovieDatasource {
   @override
   Future<List<MovieModel>> searchMovies(String query) async {
     final response = await client.get(
-      TheMoviedbEndpoints.searchMovies(ThemovieDBKey.apiKey, query),
+      TheMoviedbEndpoints.searchMovies(TheMovieKey.apiKey, query),
     );
     if (response.statusCode == 200) {
       var json = jsonDecode(response.data);

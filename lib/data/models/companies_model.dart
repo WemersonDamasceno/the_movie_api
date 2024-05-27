@@ -1,4 +1,4 @@
-import 'package:the_movies_api/core/utils/keys/themoviedb_key.dart';
+import 'package:the_movies_api/core/utils/constants/the_movie_constants.dart';
 import 'package:the_movies_api/domain/entities/companies_entity.dart';
 
 class CompaniesModel extends CompaniesEntity {
@@ -19,7 +19,7 @@ class CompaniesModel extends CompaniesEntity {
   factory CompaniesModel.fromJson(Map<String, dynamic> json) {
     return CompaniesModel(
       nameModel: json['name'],
-      logoPathModel: "${ThemovieDBKey.baseUrlImage}${json['logo_path']}",
+      logoPathModel: "${TheMoviesConstants.baseUrlImage}${json['logo_path']}",
       idModel: json['id'],
     );
   }
