@@ -85,6 +85,7 @@ class ItemMovieWidget extends StatelessWidget with ItemMovieMixin {
         Text(
           DateFormatter.formatDate(date),
           style: CustomStyles.styleTextSubtitle,
+          overflow: TextOverflow.ellipsis,
         ),
       ],
     );

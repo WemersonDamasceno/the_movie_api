@@ -45,11 +45,18 @@ class BodyDetailMoveSuccessWidget extends StatelessWidget {
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      Text(
-                        formatteTextSize(movie.movieDetails!.tagline, 25),
-                        style: const TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 232, 232, 232),
+                      Tooltip(
+                        message: movie.movieDetails!.tagline,
+                        child: SizedBox(
+                          width: size.width * 0.6,
+                          child: Text(
+                            movie.movieDetails!.tagline,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Color.fromARGB(255, 232, 232, 232),
+                            ),
+                          ),
                         ),
                       ),
                       const Spacer(),
@@ -69,6 +76,7 @@ class BodyDetailMoveSuccessWidget extends StatelessWidget {
                           Text(
                             "From ${movie.movieDetails!.voteCount} users",
                             style: CustomStyles.styleTextSubtitle,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ],
                       ),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:the_movies_api/core/utils/constants/app_colors.dart';
+import 'package:the_movies_api/core/utils/enums/feature_flags_enum.dart';
 import 'package:the_movies_api/core/utils/enums/status_enum.dart';
+import 'package:the_movies_api/core/utils/helpers/permissions_app.dart';
 import 'package:the_movies_api/domain/entities/movie_entity.dart';
 import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_bloc.dart';
 import 'package:the_movies_api/presentation/details_movie/bloc/get_movie_by_id_event.dart';
@@ -28,6 +29,9 @@ class DetailsMovieView extends StatefulWidget {
 class _DetailsMovieViewState extends State<DetailsMovieView> {
   late GetMovieByIdBloc _getMovieByIdBloc;
 
+  final PermissionsApp _permissionsApp = PermissionsApp();
+  bool _isFeatureEnabled = false;
+
   @override
   void initState() {
     super.initState();
@@ -38,6 +42,23 @@ class _DetailsMovieViewState extends State<DetailsMovieView> {
         idMovie: widget.movieEntity.id,
       ),
     );
+
+    _verifyFeature();
+  }
+
+  _verifyFeature() async {
+    _isFeatureEnabled = await _permissionsApp.isFeatureEnabled(
+      FeatureFlagsEnum.watchTrailer,
+    );
+    setState(() {});
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+
+    _getMovieByIdBloc.close();
+    _isFeatureEnabled = false;
   }
 
   @override
@@ -79,10 +100,13 @@ class _DetailsMovieViewState extends State<DetailsMovieView> {
               bottom: 16,
               left: 16,
               right: 16,
-              child: ButtonLargeWidget(
-                key: const ValueKey("back-home"),
-                label: "Home page",
-                onPressed: () => GoRouter.of(context).pop(),
+              child: Visibility(
+                visible: _isFeatureEnabled,
+                child: ButtonLargeWidget(
+                  key: const ValueKey("back-home"),
+                  label: "Watch trailer",
+                  onPressed: () {},
+                ),
               ),
             ),
           ],
