@@ -62,6 +62,20 @@ jobs:
 
       - name: 🔍 Check Formatting
         run: dart format --set-exit-if-changed lib test
+
+      - name: 🔑🎬 Create TheMovieKey Config File
+        run: |
+          mkdir -p lib/core/utils/keys
+          echo "class TheMovieKey {
+          static const String apiKey = \"${{ secrets.THE_MOVIE_API_KEY }}\";
+          }" > lib/core/utils/keys/the_movie_key.dart
+
+      - name: 🔑🐱‍👤 Create CatConfigKey Config File
+        run: |
+          mkdir -p lib/core/utils/keys
+          echo "class CatConfigKey {
+          static const String catConfig = \"${{ secrets.CAT_CONFIG_KEY }}\";
+          }" > lib/core/utils/keys/cat_config_key.dart
       
       - name: 🕵️ Analyze
         run: flutter analyze lib test
