@@ -28,6 +28,7 @@ dependencies:
   percent_indicator: any # https://pub.dev/packages/percent_indicator
   shimmer: ^3.0.0 # https://pub.dev/packages/shimmer
   dartdoc: ^8.0.8 # https://pub.dev/packages/dartdoc
+  configcat_client: ^4.1.1
 
 dev_dependencies:
   flutter_test:
