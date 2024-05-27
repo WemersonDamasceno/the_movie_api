@@ -4,7 +4,7 @@ import 'package:the_movies_api/core/utils/enums/feature_flags_enum.dart';
 class PermissionsApp {
   Future<bool> isFeatureEnabled(FeatureFlagsEnum featureFlag) async {
     final client = ConfigCatClient.get(
-      sdkKey: 'API_KEY_HERE',
+      sdkKey: 'YOUR_SDK_KEY',
       options: ConfigCatOptions(
         logger: ConfigCatLogger(level: LogLevel.info),
       ),
