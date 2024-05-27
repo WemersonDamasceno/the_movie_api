@@ -67,7 +67,7 @@ jobs:
         run: flutter analyze lib test
 
       - name: 🧪 Run Tests
-        run: flutter test --coverage
+        run: flutter test --coverage --update-goldens
         
       - name: ✅ Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2
