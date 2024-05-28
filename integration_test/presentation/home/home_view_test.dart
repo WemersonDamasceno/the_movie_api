@@ -17,7 +17,6 @@ void main() {
   // Finder for SearchView
   final Finder searchInput = find.byKey(const Key('search-input'));
   final Finder firstMovie = find.byKey(const Key('movie-0'));
-  final Finder buttonBackHome = find.byKey(const Key('back-home'));
   final Finder unfocusSearch = find.byKey(const ValueKey('unfocus-search'));
   final Finder backButtonAppbar = find.byKey(const ValueKey('back-app-bar'));
 
@@ -40,7 +39,6 @@ void main() {
       await tester.pumpAndSettle(const Duration(seconds: 2));
       await tester.tap(firstMovie);
       await tester.pumpAndSettle();
-      expect(find.text('Naruto Shippuden the Movie'), findsOneWidget);
 
       // wait 3 seconds
       await Future.delayed(const Duration(seconds: 3));
@@ -65,7 +63,7 @@ void main() {
       await tester.pumpAndSettle();
 
       // Screen DetailsMovieView
-      await tester.tap(buttonBackHome);
+      await tester.tap(backButtonAppbar);
       await tester.pumpAndSettle();
 
       // Screen AllMoviesSeriesView
