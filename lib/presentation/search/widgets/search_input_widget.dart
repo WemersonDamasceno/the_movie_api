@@ -17,7 +17,7 @@ class SearchInputWidget extends StatelessWidget {
     return Container(
       height: 50,
       alignment: Alignment.centerLeft,
-      padding: const EdgeInsets.only(left: 16),
+      padding: const EdgeInsets.only(left: 16, top: 3),
       width: size.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),

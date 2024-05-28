@@ -49,61 +49,60 @@ class _AllMoviesSeriesViewState extends State<AllMoviesSeriesView> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      floatingActionButton: const ButtonBackWidget(),
+      appBar: AppBar(
+        backgroundColor: AppColors.backgroundColorPage,
+        elevation: 0,
+        leading: ButtonBackWidget(),
+        title: Text(
+          widget.category == CategoryEnum.movies.name
+              ? 'All Movies'
+              : 'All Series',
+          style: CustomStyles.stylePercentText,
+        ),
+      ),
       backgroundColor: AppColors.backgroundColorPage,
       body: SingleChildScrollView(
         child: Container(
           width: size.width,
           height: size.height,
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10, bottom: 80),
           child: Padding(
             padding: const EdgeInsets.only(
               left: 16,
               right: 16,
-              top: 60,
             ),
-            child: ListView(
-              shrinkWrap: true,
-              //crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.category == CategoryEnum.movies.name
-                      ? 'All Movies'
-                      : 'All Series',
-                  style: CustomStyles.stylePercentText,
-                ),
-                const SizedBox(height: 20),
-                BlocBuilder<GetAllMoviesSeriesBloc, GetAllMoviesSeriesState>(
-                  bloc: _getAllMoviesSeriesBloc,
-                  builder: (context, state) {
-                    switch (state.status) {
-                      case StatusEnum.empty:
-                        return const BodyNoMoviesWidget();
-                      case StatusEnum.error:
-                        return BodyErrorMoviesWidget(
-                          onPressedTryAgain: () {
-                            _getAllMoviesSeriesBloc.add(
-                              GetAllMoviesSeries(category: widget.category),
-                            );
-                          },
-                        );
-                      case StatusEnum.success:
-                        return SizedBox(
-                          height: size.height,
-                          child: GridViewListMovieWidget(
-                            moviesList: state.listMovies!,
-                          ),
-                        );
-                      default:
-                        return SizedBox(
-                          height: size.height,
-                          child: const GridViewLoadingMovieWidget(),
-                        );
-                    }
-                  },
-                ),
-              ],
-            ),
+            child: LayoutBuilder(builder: (context, constraints) {
+              return BlocBuilder<GetAllMoviesSeriesBloc,
+                  GetAllMoviesSeriesState>(
+                bloc: _getAllMoviesSeriesBloc,
+                builder: (context, state) {
+                  switch (state.status) {
+                    case StatusEnum.empty:
+                      return const BodyNoMoviesWidget();
+                    case StatusEnum.error:
+                      return BodyErrorMoviesWidget(
+                        onPressedTryAgain: () {
+                          _getAllMoviesSeriesBloc.add(
+                            GetAllMoviesSeries(category: widget.category),
+                          );
+                        },
+                      );
+                    case StatusEnum.success:
+                      return SizedBox(
+                        height: constraints.minHeight,
+                        child: GridViewListMovieWidget(
+                          moviesList: state.listMovies!,
+                        ),
+                      );
+                    default:
+                      return SizedBox(
+                        height: constraints.minHeight - kToolbarHeight,
+                        child: const GridViewLoadingMovieWidget(),
+                      );
+                  }
+                },
+              );
+            }),
           ),
         ),
       ),

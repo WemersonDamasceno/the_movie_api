@@ -27,6 +27,7 @@ class GridViewListMovieWidget extends StatelessWidget with ItemMovieMixin {
         physics: const BouncingScrollPhysics(),
         itemBuilder: (_, index) {
           final MovieEntity movie = moviesList[index];
+
           return InkWell(
             key: ValueKey('movie-$index'),
             onTap: () {

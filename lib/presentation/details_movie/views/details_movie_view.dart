@@ -66,7 +66,16 @@ class _DetailsMovieViewState extends State<DetailsMovieView> {
     return SafeArea(
       top: false,
       child: Scaffold(
-        floatingActionButton: const ButtonBackWidget(),
+        floatingActionButton: Align(
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: const EdgeInsets.only(
+              top: 30,
+              left: 20,
+            ),
+            child: const ButtonBackWidget(),
+          ),
+        ),
         backgroundColor: AppColors.backgroundColorPage,
         body: Stack(
           children: [

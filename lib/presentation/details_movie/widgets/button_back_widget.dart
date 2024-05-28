@@ -5,21 +5,18 @@ class ButtonBackWidget extends StatelessWidget {
   const ButtonBackWidget({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: kToolbarHeight,
-        left: 16,
-      ),
-      child: Align(
-        alignment: Alignment.topLeft,
-        child: ElevatedButton(
-          key: const ValueKey('back-app-bar'),
-          style: ElevatedButton.styleFrom(
-            shape: const CircleBorder(),
-          ),
-          onPressed: () => GoRouter.of(context).pop(),
-          child: const Icon(Icons.arrow_back),
+    return GestureDetector(
+      onTap: () => GoRouter.of(context).pop(),
+      child: Container(
+        height: 40,
+        width: 40,
+        margin: const EdgeInsets.all(8),
+        key: const ValueKey('back-app-bar'),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(100),
         ),
+        child: const Icon(Icons.arrow_back),
       ),
     );
   }

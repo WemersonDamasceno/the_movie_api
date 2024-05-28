@@ -47,7 +47,19 @@ class _SearchViewState extends State<SearchView> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      floatingActionButton: const ButtonBackWidget(),
+      appBar: AppBar(
+        backgroundColor: AppColors.backgroundColorPage,
+        elevation: 0,
+        leading: ButtonBackWidget(),
+        title: GestureDetector(
+          key: ValueKey('unfocus-search'),
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: const Text(
+            "Search for a movie",
+            style: CustomStyles.styleTextTopic,
+          ),
+        ),
+      ),
       backgroundColor: AppColors.backgroundColorPage,
       body: SizedBox(
         width: size.width,
@@ -59,19 +71,10 @@ class _SearchViewState extends State<SearchView> {
               padding: const EdgeInsets.only(
                 left: 16,
                 right: 16,
-                top: 90,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  GestureDetector(
-                    key: ValueKey('unfocus-search'),
-                    onTap: () => FocusScope.of(context).unfocus(),
-                    child: const Text(
-                      "Search for a movie",
-                      style: CustomStyles.styleTextTopic,
-                    ),
-                  ),
                   const SizedBox(height: 10),
                   SearchInputWidget(
                     inputController: _inputController,
