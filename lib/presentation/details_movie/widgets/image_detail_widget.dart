@@ -24,7 +24,7 @@ class ImageDetailWidget extends StatelessWidget {
         BackdropImageWidget(backdropPath: backdropPath),
         ImagePathWidget(posterPath: posterPath),
         Positioned(
-          top: 25,
+          top: 60,
           right: 20,
           child: Container(
             padding: const EdgeInsets.all(8),

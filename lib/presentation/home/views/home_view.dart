@@ -13,10 +13,15 @@ class HomeView extends StatelessWidget with HomePageMixin {
       backgroundColor: AppColors.backgroundColorPage,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(110),
-        child: AppBarHomeWidget(),
+        child: Padding(
+          padding: EdgeInsets.only(top: 24),
+          child: AppBarHomeWidget(),
+        ),
       ),
       body: Padding(
-        padding: EdgeInsets.only(left: 15),
+        padding: EdgeInsets.only(
+          left: 15,
+        ),
         child: BodyHomeWidget(),
       ),
     );
